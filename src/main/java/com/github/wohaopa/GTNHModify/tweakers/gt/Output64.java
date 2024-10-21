@@ -3,14 +3,14 @@ package com.github.wohaopa.GTNHModify.tweakers.gt;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
-import gregtech.api.util.GT_Recipe;
+import gregtech.api.util.GTRecipe;
 
 public class Output64 extends GT_RecipeTweaker {
 
     int integer = 64;
 
     @Override
-    protected void modifyGT_Recipe(GT_Recipe aRecipe) {
+    protected void modifyGT_Recipe(GTRecipe aRecipe) {
         if (aRecipe.mOutputs != null) {
             for (ItemStack itemStack : aRecipe.mOutputs) {
                 if (itemStack != null) {
@@ -30,7 +30,7 @@ public class Output64 extends GT_RecipeTweaker {
     }
 
     @Override
-    protected void modifyGT_Recipe_AssemblyLine(GT_Recipe.GT_Recipe_AssemblyLine aRecipe) {
+    protected void modifyGT_Recipe_AssemblyLine(GTRecipe.RecipeAssemblyLine aRecipe) {
         if (aRecipe.mOutput != null) {
             if (aRecipe.mOutput.stackSize > 0 && aRecipe.mOutput.stackSize < integer)
                 aRecipe.mOutput.stackSize = integer;

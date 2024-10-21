@@ -6,9 +6,9 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 import com.github.wohaopa.GTNHModify.tweakers.handler.GregTechHandler;
 
-import gregtech.common.tileentities.machines.multi.GT_MetaTileEntity_MultiFurnace;
+import gregtech.common.tileentities.machines.multi.MTEMultiFurnace;
 
-@Mixin(value = GT_MetaTileEntity_MultiFurnace.class, remap = false)
+@Mixin(value = MTEMultiFurnace.class, remap = false)
 public class GT_MetaTileEntity_MultiFurnaceMixin {
 
     @ModifyConstant(method = "checkProcessing", constant = @Constant(intValue = 512))

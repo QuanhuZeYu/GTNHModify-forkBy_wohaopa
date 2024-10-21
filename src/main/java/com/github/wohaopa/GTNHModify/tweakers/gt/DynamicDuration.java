@@ -2,7 +2,7 @@ package com.github.wohaopa.GTNHModify.tweakers.gt;
 
 import com.github.wohaopa.GTNHModify.GTNHModifyMod;
 
-import gregtech.api.util.GT_Recipe;
+import gregtech.api.util.GTRecipe;
 
 public class DynamicDuration extends GT_RecipeTweaker {
 
@@ -48,13 +48,13 @@ public class DynamicDuration extends GT_RecipeTweaker {
     private float f0 = 1f;
 
     @Override
-    protected void modifyGT_Recipe(GT_Recipe aRecipe) {
+    protected void modifyGT_Recipe(GTRecipe aRecipe) {
         aRecipe.mDuration *= (int) f0;
         if (aRecipe.mDuration < 1) aRecipe.mDuration = 1;
     }
 
     @Override
-    protected void modifyGT_Recipe_AssemblyLine(GT_Recipe.GT_Recipe_AssemblyLine aRecipe) {
+    protected void modifyGT_Recipe_AssemblyLine(GTRecipe.RecipeAssemblyLine aRecipe) {
         aRecipe.mDuration *= (int) f0;
         if (aRecipe.mDuration < 1) aRecipe.mDuration = 1;
     }

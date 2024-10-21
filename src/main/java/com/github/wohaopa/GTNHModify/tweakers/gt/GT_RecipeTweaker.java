@@ -3,7 +3,7 @@ package com.github.wohaopa.GTNHModify.tweakers.gt;
 import com.github.wohaopa.GTNHModify.tweakers.ITweaker;
 
 import gregtech.api.recipe.RecipeMap;
-import gregtech.api.util.GT_Recipe;
+import gregtech.api.util.GTRecipe;
 
 public abstract class GT_RecipeTweaker extends ITweaker {
 
@@ -13,10 +13,10 @@ public abstract class GT_RecipeTweaker extends ITweaker {
             if (!recipeMap.unlocalizedName.equals("gg.recipe.naquadah_reactor")) recipeMap.getAllRecipes()
                 .forEach(this::modifyGT_Recipe);
         });
-        GT_Recipe.GT_Recipe_AssemblyLine.sAssemblylineRecipes.forEach(this::modifyGT_Recipe_AssemblyLine);
+        GTRecipe.RecipeAssemblyLine.sAssemblylineRecipes.forEach(this::modifyGT_Recipe_AssemblyLine);
     }
 
-    protected abstract void modifyGT_Recipe(GT_Recipe aRecipe);
+    protected abstract void modifyGT_Recipe(GTRecipe aRecipe);
 
-    protected abstract void modifyGT_Recipe_AssemblyLine(GT_Recipe.GT_Recipe_AssemblyLine aRecipe);
+    protected abstract void modifyGT_Recipe_AssemblyLine(GTRecipe.RecipeAssemblyLine aRecipe);
 }

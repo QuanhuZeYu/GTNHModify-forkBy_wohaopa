@@ -3,9 +3,13 @@ package com.github.wohaopa.GTNHModify.tweakers;
 import java.lang.reflect.Field;
 import java.util.HashMap;
 
-import com.github.technus.tectech.TecTech;
-import com.github.technus.tectech.recipe.EyeOfHarmonyRecipe;
-import com.github.technus.tectech.recipe.EyeOfHarmonyRecipeStorage;
+//import com.github.technus.tectech.TecTech;
+//import com.github.technus.tectech.recipe.EyeOfHarmonyRecipe;
+//import com.github.technus.tectech.recipe.EyeOfHarmonyRecipeStorage;
+
+import tectech.TecTech;
+import tectech.recipe.EyeOfHarmonyRecipe;
+import tectech.recipe.EyeOfHarmonyRecipeStorage;
 
 public class EyeOfHarmonyRecipeTweaker extends ITweaker {
 
