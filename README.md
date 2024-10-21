@@ -1,5 +1,10 @@
 # GTNH Modify
+
 GTNH modpack modification mod, dedicated to the modification of the recipe.
+
+## Thanks for [wohaopa](https://github.com/wohaopa) and [Ol925](https://github.com/Ol925)
+
+The ownership of the work belongs to the aforementioned two individuals. If there is any inappropriate content in this repository, please contact me immediately for its removal.
 
 English
 [中文](./README_CN.md)
