@@ -6,10 +6,7 @@ import com.github.wohaopa.GTNHModify.tweakers.gt.InputOne;
 import com.github.wohaopa.GTNHModify.tweakers.gt.OneTickTweaker;
 import com.github.wohaopa.GTNHModify.tweakers.gt.Output64;
 import com.github.wohaopa.GTNHModify.tweakers.gt.TenthsTweaker;
-import com.github.wohaopa.GTNHModify.tweakers.handler.BotaniaHandler;
-import com.github.wohaopa.GTNHModify.tweakers.handler.GregTechHandler;
-import com.github.wohaopa.GTNHModify.tweakers.handler.MinecraftHandler;
-import com.github.wohaopa.GTNHModify.tweakers.handler.ThaumcraftHandler;
+import com.github.wohaopa.GTNHModify.tweakers.handler.*;
 
 public enum Tweakers {
 
@@ -34,13 +31,14 @@ public enum Tweakers {
     GregTech("Handle GregTech", "The time of some devices was changed to 1 tick", GregTechHandler.instance),
     Minecraft("Handle Minecraft", "The time of some devices was changed to 1 tick", MinecraftHandler.instance),
     Thaumcraft("Handle Thaumcraft", "The time of some devices was changed to 1 tick", ThaumcraftHandler.instance),
+    TreeFarm("Handle TreeFarm", "No decress item damage", TreeFarmHandler.instance)
     // :(
     ;
 
-    public static void initialize() {
+    public static void initialize() { // 在服务器启动时被调用 也可被命令触发
         for (Tweakers tweaker : Tweakers.values()) {
             if (tweaker.enabled) {
-                tweaker.tweaker.apply0();
+                tweaker.tweaker.apply0();  // 执行配置 -> 调用每个tweaker的apply()
             }
         }
     }

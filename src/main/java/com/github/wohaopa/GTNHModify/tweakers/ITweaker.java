@@ -4,7 +4,7 @@ public abstract class ITweaker {
 
     private boolean done = false;
 
-    public void apply0() {
+    public void apply0() { // 规定只能执行一次
         if (done) return;
         done = true;
         apply();

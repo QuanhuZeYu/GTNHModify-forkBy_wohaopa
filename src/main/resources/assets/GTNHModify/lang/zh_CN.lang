@@ -1,0 +1,10 @@
+commands.gtnh-modify.usage=用于导出某些游戏内容.
+commands.gtnh-modify.help.usage=/gtnh-modify help: 获取帮助
+commands.gtnh-modify.export.usage=/gtnh-modify export: 导出
+commands.gtnh-modify.load.usage=/gtnh-modify load: 重载, 当nei无法正确显示时
+commands.gtnh-modify.hello.usage=/gtnh-modify hello: 初夏的打招呼 Hello World!
+commands.gtnh-modify.set.usage=/gtnh-modify set: 游戏内设置某些值, 目前仅支持部分配置使用命令配置
+commands.gtnh-modify.set.curSupport=当前支持的设置指令: <treeFarmNoDamage> <true/false>
+
+commands.gtnh-modify.load.success=加载修改成功!
+commands.gtnh-modify.load.failure=加载修改失败! 可能需要重启一下, 或者它只是刚刚加载好!

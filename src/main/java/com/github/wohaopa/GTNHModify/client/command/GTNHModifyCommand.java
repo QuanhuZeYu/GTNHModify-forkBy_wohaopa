@@ -40,7 +40,7 @@ public class GTNHModifyCommand extends CommandBase {
         return "commands.gtnh-modify.usage";
     }
 
-    private static final List<String> subCmds = Stream.of("hello", "export", "help", "load")
+    private static final List<String> subCmds = Stream.of("hello", "export", "help", "load", "set")
         .sorted()
         .collect(Collectors.toList());
 
@@ -92,6 +92,10 @@ public class GTNHModifyCommand extends CommandBase {
                         Tweakers.initialize();
                         sender.addChatMessage(new ChatComponentTranslation("commands.gtnh-modify.load.success"));
 
+                    }
+                    case "set" -> {
+                        sender.addChatMessage(new ChatComponentTranslation("commands.gtnh-modify.set.usage"));
+                        sender.addChatMessage(new ChatComponentTranslation("commands.gtnh-modify.set.curSupport"));
                     }
                     default -> {
                         if (subCmds.contains(test)) {

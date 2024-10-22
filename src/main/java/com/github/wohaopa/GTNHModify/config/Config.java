@@ -17,6 +17,11 @@ public class Config {
 
     private static boolean doSave;
 
+    /**
+     * 初始化config 加载config 注册该类到FML事件总线
+     * 注册的事件为OnConfigChangedEvent
+     * @param configFile preEvent所推荐的配置文件 File
+     */
     public static void init(File configFile) {
         if (config == null) {
             config = new Configuration(configFile);
@@ -28,6 +33,10 @@ public class Config {
             .register(new Config());
     }
 
+    /**
+     * 如果事件中变化的配置是本Mod,则进行保存
+     * @param event OnConfigChangedEvent
+     */
     @SubscribeEvent
     public void onConfigChangedEvent(ConfigChangedEvent.OnConfigChangedEvent event) {
         if (event.modID.equalsIgnoreCase(GTNHModifyMod.MODID)) {
@@ -35,12 +44,19 @@ public class Config {
         }
     }
 
+    /**
+     * 加载配置
+     * 遍历 Tweakers 枚举类
+     * 获取每个枚举对象的名字来读取配置, 再进行赋值<br>
+     * ----获取值为: 所有类型 String, Boolean, Integer, String[], Float
+     * ----将获取到的值赋给自己
+     */
     private static void loadConfig() {
 
         for (Tweakers tweaker : Tweakers.values()) {
             tweaker.enabled = config
-                .getBoolean(tweaker.name, Configuration.CATEGORY_GENERAL, false, tweaker.description);
-            Object setting = tweaker.tweaker.getSettings();
+                .getBoolean(tweaker.name, Configuration.CATEGORY_GENERAL, false, tweaker.description); // 使用枚举中的每个名字作为键取出布尔值
+            Object setting = tweaker.tweaker.getSettings();  // 通过枚举中的 ITweaker 类获取其String
             if (setting != null) {
                 if (setting instanceof String) {
                     tweaker.tweaker.setSetting(

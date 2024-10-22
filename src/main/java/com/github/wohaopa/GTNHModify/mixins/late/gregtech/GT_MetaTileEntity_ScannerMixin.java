@@ -16,5 +16,3 @@ public abstract class GT_MetaTileEntity_ScannerMixin {
         return GregTechHandler.instance.handle(this, x);
     }
 }
-
-// "calculateOverclockedNess" -> "calculateOverclockedNess"

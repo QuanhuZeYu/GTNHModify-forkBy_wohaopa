@@ -62,5 +62,6 @@ if(useMoreMod) {
     dependencies {
         runtimeOnly("com.github.GTNewHorizons:WAILAPlugins:0.5.1:dev")
         runtimeOnly("com.github.GTNewHorizons:WailaHarvestability:1.2.1-GTNH:dev")
+        runtimeOnly("com.github.GTNewHorizons:ServerUtilities:2.0.79:dev")
     }
 }

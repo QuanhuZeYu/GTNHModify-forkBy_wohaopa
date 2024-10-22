@@ -3,6 +3,8 @@ commands.gtnh-modify.help.usage=/gtnh-modify help: Get help
 commands.gtnh-modify.export.usage=/gtnh-modify export: Export
 commands.gtnh-modify.load.usage=/gtnh-modify load: Load modify if nei does not display correctly
 commands.gtnh-modify.hello.usage=/gtnh-modify hello: HelloWorld
+commands.gtnh-modify.set.usage=/gtnh-modify set: Set
+commands.gtnh-modify.set.curSupport=current support set command: <treeFarmNoDamage> <true/false>
 
 commands.gtnh-modify.load.success=Load Modify Success!
 commands.gtnh-modify.load.failure=Load Modify Failure! Probably need a restart, or it's already loaded!
